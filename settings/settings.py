@@ -16,7 +16,7 @@ RAPIDAPI_KEY = os.environ.get('RAPIDAPI_KEY')
 
 HEADERS = {
     'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-    'X-RapidAPI-Key': API_KEY
+    'X-RapidAPI-Key': RAPIDAPI_KEY
 }
 
 
