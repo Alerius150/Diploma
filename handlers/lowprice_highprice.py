@@ -1,7 +1,6 @@
 import json
 import re
 import requests
-
 from typing import Union, Any, Dict, Optional, List, Tuple
 from requests.models import Response
 from datetime import datetime
@@ -11,7 +10,7 @@ from database.models import user, DataBaseModel, Hotel
 from settings import constants
 from settings import settings
 from . import bestdeal
-from api_requests.request_api import request_search, request_property_list, request_get_photo, request_bestdeal
+from api_requests.request_api import
 from keyboards import keyboards, keyboards_text, calendar
 from telebot.types import CallbackQuery, InputMediaPhoto, Message
 from .start_help import start_command, check_state_inline_keyboard

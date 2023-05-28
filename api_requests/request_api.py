@@ -1,13 +1,11 @@
 import re
-import requests
-import json
 from telebot.types import InlineKeyboardMarkup
-from config_data.my_config import url_from_cities, headers
-from keyboards.inline.button_citi import get_button_cities
-from config_data.my_config import url_from_photo, headers
+import json
 from typing import List, Optional, Union
-from config_data.my_config import url_from_properties, headers
-from utils.logger import logger
+import requests
+
+
+
 
 
 def get_dest_id(city: str, locale: str, currency: str, state: str) -> Optional[Union[str, InlineKeyboardMarkup]]:
@@ -79,13 +77,7 @@ def get_photo_hotel(sity_id: int, count_photo: str) -> Union[list, bool]:
 
 
 
-import json
-from typing import List, Optional, Union
 
-import requests
-from config_data.my_config import url_from_properties, headers
-from loader import db_hisory
-from utils.logger import logger
 
 
 def get_distance_to_centre(landmarks: List[dict], user_id: int) -> Optional[str]:
