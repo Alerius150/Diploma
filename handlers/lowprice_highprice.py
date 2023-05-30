@@ -10,7 +10,6 @@ from database.models import user, DataBaseModel, Hotel
 from settings import constants
 from settings import settings
 from . import bestdeal
-from api_requests.request_api import
 from keyboards import keyboards, keyboards_text, calendar
 from telebot.types import CallbackQuery, InputMediaPhoto, Message
 from .start_help import start_command, check_state_inline_keyboard
