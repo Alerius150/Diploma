@@ -85,7 +85,7 @@ def get_distance_to_centre(landmarks: List[dict], user_id: int) -> Optional[str]
     Функция проверки наличия в словаре дистанции до центра
     :param user_id: Идентификатор пользователя
     :param landmarks: Список со словарём, где могут быть расстояние до центра города/достопримечательности
-    :return: str Расстояние. Либо None
+    :return: str Расстояние. Либо Nsone
     """
     logger.info(f'{user_id} Вызвана функция get_distance_to_centre(propert)')
     for i in landmarks:

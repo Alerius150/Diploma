@@ -14,7 +14,7 @@ bot = TeleBot(token=TOKEN)
 
 def exception_handler(func: Callable) -> Callable:
     """
-    Декоратор - оборачивающий функцию в try-except блок.
+    Декоратор - оборачивающий функцию в try-except блоsк.
 
     :param func: Callable
     :return: Callable

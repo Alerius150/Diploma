@@ -418,7 +418,7 @@ def showing_hotels_with_photo(call: CallbackQuery, hotel: Dict, hotel_show: str,
 @exception_handler
 def photo_append(call: CallbackQuery, result_photo: List, hotel_show: str) -> Tuple[List, str]:
     """
-    Функция подготавливающая список с медиа-инпутами для медиа-группы.
+    Функция подготавливающsая список с медиа-инпутами для медиа-группы.
     Так же проверяет запросы к фотографиям на наличие ошибки.
 
     :param call: CallbackQuery

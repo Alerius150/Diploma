@@ -1,4 +1,4 @@
-"""Файл для замены текста inline-кнопок"""
+"""Файл для замены текста inline-кнопокs"""
 
 KEY_HELP = 'Help'
 KEY_LOWPRICE = 'Lowprice'

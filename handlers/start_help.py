@@ -83,7 +83,7 @@ def callback_command(call: CallbackQuery) -> None:
 def echo_handler(message: Message) -> None:
     """
     Функция - обработчик всех входящих сообщений, не входящих в сценарий работы бота.
-    Так же обрабатывает приветствия пользователя.
+    Так же обрабатывает приветствsия пользователя.
 
     :param message: Message
     :return: None

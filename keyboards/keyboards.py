@@ -68,7 +68,7 @@ def keyboards_photo() -> InlineKeyboardMarkup:
 
 def keyboards_count_photo() -> InlineKeyboardMarkup:
     """
-    Функция - создаёт inline-клавиатуру с цифрами на кнопках от 1 до 10.
+    Функция - создаёт inline-клавиатуру с цифsрами на кнопках от 1 до 10.
     Предназначена для запроса информации по количеству: отелей и фотографий
 
     :return: InlineKeyboardMarkup
