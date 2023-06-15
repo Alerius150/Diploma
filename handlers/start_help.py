@@ -33,7 +33,7 @@ def start_command(message: Message) -> None:
             message.from_user.id, constants.HELP_MESSAGE, reply_markup=keyboard_commands(message.text)
         )
         user.edit('bot_message', bot_message)
-    elif message.text in [constants.LOWPRICE, constants.HIGHPRICE, constants.BESTDEAL]:
+    elif message.text in [constants.LOW, constants.HIGH, constants.CUSTOM]:
         lowprice_highprice.record_command(message)
     elif message.text == constants.HISTORY:
         history.history_menu(message)
@@ -72,7 +72,7 @@ def callback_command(call: CallbackQuery) -> None:
             call.from_user.id, constants.HELP_MESSAGE, reply_markup=keyboard_commands(call.data)
         )
         user.edit('bot_message', bot_message)
-    elif call.data in [constants.LOWPRICE, constants.HIGHPRICE, constants.BESTDEAL]:
+    elif call.data in [constants.LOW, constants.HIGH, constants.CUSTOM]:
         lowprice_highprice.record_command(call)
     elif call.data == constants.HISTORY:
         history.history_menu(call)
@@ -83,7 +83,7 @@ def callback_command(call: CallbackQuery) -> None:
 def echo_handler(message: Message) -> None:
     """
     Функция - обработчик всех входящих сообщений, не входящих в сценарий работы бота.
-    Так же обрабатывает приветствsия пользователя.
+    Так же обрабатывает приветствия пользователя.
 
     :param message: Message
     :return: None

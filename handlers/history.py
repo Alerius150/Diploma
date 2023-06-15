@@ -135,7 +135,7 @@ def history_hotels_show(call: CallbackQuery, hotel: tuple) -> None:
 
     :param call: CallbackQuery
     :param hotel: tuple
-    :return: Nosne
+    :return: None
     """
     logger.info(str(call.from_user.id))
     if hotel[1] != '':

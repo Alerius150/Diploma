@@ -1,4 +1,7 @@
-
+"""
+Файл для создания экземпляров: бота и логгера.
+Так же содержит декоратор для отлова исключений и логгирования ошибок
+"""
 from typing import Callable
 
 from requests import ReadTimeout
@@ -14,7 +17,7 @@ bot = TeleBot(token=TOKEN)
 
 def exception_handler(func: Callable) -> Callable:
     """
-    Декоратор - оборачивающий функцию в try-except блоsк.
+    Декоратор - оборачивающий функцию в try-except блок.
 
     :param func: Callable
     :return: Callable

@@ -1,3 +1,7 @@
+"""
+Файл для запуска бота и создания БД, в случае её отсутствия
+"""
+
 import handlers
 from database.models import DataBaseModel
 from loader import bot, logger

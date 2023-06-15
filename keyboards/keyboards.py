@@ -14,13 +14,18 @@ def keyboard_commands(command: str) -> InlineKeyboardMarkup:
     """
     keyboard = types.InlineKeyboardMarkup(row_width=2)
     if command == constants.START:
-        key_help = types.InlineKeyboardButton(text=keyboards_text.KEY_HELP, callback_data=constants.HELP)
+        key_help = types.InlineKeyboardButton(text=keyboards_text.KEY_HELP,
+                                              callback_data=constants.HELP)
         keyboard.add(key_help)
     elif command == constants.HELP:
-        key_lowprice = types.InlineKeyboardButton(text=keyboards_text.KEY_LOWPRICE, callback_data=constants.LOWPRICE)
-        key_highprice = types.InlineKeyboardButton(text=keyboards_text.KEY_HIGHPRICE, callback_data=constants.HIGHPRICE)
-        key_bestdeal = types.InlineKeyboardButton(text=keyboards_text.KEY_BESTDEAL, callback_data=constants.BESTDEAL)
-        key_history = types.InlineKeyboardButton(text=keyboards_text.KEY_HISTORY, callback_data=constants.HISTORY)
+        key_lowprice = types.InlineKeyboardButton(text=keyboards_text.KEY_LOW,
+                                                  callback_data=constants.LOW)
+        key_highprice = types.InlineKeyboardButton(text=keyboards_text.KEY_HIGH,
+                                                   callback_data=constants.HIGH)
+        key_bestdeal = types.InlineKeyboardButton(text=keyboards_text.KEY_CUSTOM,
+                                                  callback_data=constants.CUSTOM)
+        key_history = types.InlineKeyboardButton(text=keyboards_text.KEY_HISTORY,
+                                                 callback_data=constants.HISTORY)
         keyboard.add(key_lowprice, key_highprice, key_bestdeal, key_history)
     return keyboard
 
@@ -68,7 +73,7 @@ def keyboards_photo() -> InlineKeyboardMarkup:
 
 def keyboards_count_photo() -> InlineKeyboardMarkup:
     """
-    Функция - создаёт inline-клавиатуру с цифsрами на кнопках от 1 до 10.
+    Функция - создаёт inline-клавиатуру с цифрами на кнопках от 1 до 10.
     Предназначена для запроса информации по количеству: отелей и фотографий
 
     :return: InlineKeyboardMarkup

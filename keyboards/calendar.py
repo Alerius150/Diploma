@@ -95,7 +95,7 @@ def date_out(call: CallbackQuery, result: datetime) -> None:
 @bot.callback_query_handler(func=CustomCalendar.func(calendar_id=15))
 def callback_second_calendar(call: CallbackQuery) -> None:
     """
-    Функция - обработчик sinline-календаря. Реагирует только на календарь с id = 15.
+    Функция - обработчик inline-календаря. Реагирует только на календарь с id = 15.
     После обработки пользовательской информации, перенаправляет в функцию choice_photo,
     файла lowprice_highprice.
 
