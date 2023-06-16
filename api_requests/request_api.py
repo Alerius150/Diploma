@@ -112,7 +112,7 @@ def request_get_photo(call: CallbackQuery, hotel_id: int) -> Response:
   """
   logger.info(str(call.from_user.id))
   QUERY_PHOTO['propertyId'] = hotel_id
-  HEADERS['content-type'] =  'application/json'
+  HEADERS['content-type'] = 'application/json'
   response = requests.request('POST', URL_PHOTO, headers=HEADERS,
                               json=QUERY_PHOTO, timeout=60)
   del HEADERS['content-type']
