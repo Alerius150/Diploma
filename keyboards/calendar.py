@@ -22,7 +22,6 @@ def date_in(call: CallbackQuery) -> None:
     """
     Функция - запрашивающая у пользователя минимальную дату для проживания в отеле.
     После запроса, для взаимодействия с пользователем, создаёт inline-календарь.
-
     :param call: CallbackQuery
     :return: None
     """
@@ -44,7 +43,6 @@ def callback_first_calendar(call: CallbackQuery) -> None:
     """
     Функция - обработчик inline-календаря. Реагирует только на календарь с id = 0.
     После обработки пользовательской информации, перенаправляет в функцию date_out.
-
     :param call: CallbackQuery
     :return: None
     """
@@ -71,7 +69,6 @@ def date_out(call: CallbackQuery, result: datetime) -> None:
     """
     Функция - запрашивающая у пользователя максимальную дату для проживания в отеле.
     После запроса,для взаимодействия с пользователем, создаёт inline-календарь.
-
     :param call: CallbackQuery
     :param result: datetime
     :return: None
@@ -98,7 +95,6 @@ def callback_second_calendar(call: CallbackQuery) -> None:
     Функция - обработчик inline-календаря. Реагирует только на календарь с id = 15.
     После обработки пользовательской информации, перенаправляет в функцию choice_photo,
     файла lowprice_highprice.
-
     :param call: CallbackQuery
     :return: None
     """

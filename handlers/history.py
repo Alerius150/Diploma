@@ -15,7 +15,6 @@ def history_menu(message: Union[Message, CallbackQuery]) -> None:
     """
     Функция выводит пользователю меню раздела History в виделе inline-кнопок.
     Проверяет входящий аргумент на тип данных.
-
     :param message: Message
     :return: None
     """
@@ -37,7 +36,6 @@ def callback_history_menu(call: CallbackQuery) -> None:
     В случае выбора пользователем - Просмотреть, выводит клавиатуру с подменю выбора режима просмотра истории.
     В случае выбора пользователем - Очистить, очищает историю пользователя и выводит сообщении
     об успешной очистке и дальнейших действиях.
-
     :param call: CallbackQuery
     :return: None
     """
@@ -64,7 +62,6 @@ def callback_history_showing(call: CallbackQuery) -> None:
     Функция - обработчик inline-кнопок. Реагирует только на команды из списка HISTORY_SHOW_LIST.
     Исходя из выбранного варианта, делает запрос к БД, и с полученным ответом перенаправляет в функцию
     history_showing. Если ответ пуст, то сообщает пользователю, что история пуста.
-
     :param call: CallbackQuery
     :return: None
     """
@@ -103,7 +100,6 @@ def history_showing(call: CallbackQuery, user_command: List[tuple]) -> None:
     На каждой итерации делает запрос к БД, для получения истории найденных отелей. Если отели найдены,
     то направляется в функцию history_hotels_show. В противном случае, сообщает пользователю,
     что по данной команде не были найдены отели.
-
     :param call: CallbackQuery
     :param user_command: List[tuple]
     :return: None
@@ -132,7 +128,6 @@ def history_hotels_show(call: CallbackQuery, hotel: tuple) -> None:
     """
     Функция - обрабатывающая кортеж с данными об отеле и выводящий пользователя информацию о найденном отеле.
     Если в БД хранились url фото, то выводит сообщение пользователю медиагруппой, с фотографиями.
-
     :param call: CallbackQuery
     :param hotel: tuple
     :return: None
@@ -160,7 +155,6 @@ def locale_history(call: CallbackQuery, city: str) -> str:
     """
     Функция - проверяюща введённые пользователем данные и исходя из них,
     возвращает шаблон на русском, или английском языках.
-
     :param call: CallbackQuery
     :param city: str
     :return: str

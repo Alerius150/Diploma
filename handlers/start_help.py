@@ -14,7 +14,6 @@ def start_command(message: Message) -> None:
     Исходя из пойманной команды, отправляет пользователя в соответствующий сценарий.
     Первым делом, очищает экземпляр класса UserHandle,
     так как с данного места берут начало новые команды.
-
     :param message: Message
     :return: None
     """
@@ -33,7 +32,7 @@ def start_command(message: Message) -> None:
             message.from_user.id, constants.HELP_MESSAGE, reply_markup=keyboard_commands(message.text)
         )
         user.edit('bot_message', bot_message)
-    elif message.text in [constants.LOW, constants.HIGH, constants.CUSTOM]:
+    elif message.text in [constants.LOWPRICE, constants.HIGHPRICE, constants.BESTDEAL]:
         lowprice_highprice.record_command(message)
     elif message.text == constants.HISTORY:
         history.history_menu(message)
@@ -42,7 +41,6 @@ def start_command(message: Message) -> None:
 def suggest_finding_a_hotel(message: Message) -> None:
     """
     Функция - После ответа пользователя предлагает поискать отели
-
     :param message: Message
     :return: None
     """
@@ -60,7 +58,6 @@ def callback_command(call: CallbackQuery) -> None:
     Исходя из пойманной команды, отправляет пользователя в соответствующий сценарий.
     Первым делом, очищает экземпляр класса UserHandle,
     так как с данного места берут начало новые команды.
-
     :param call: CallbackQuery
     :return: None
     """
@@ -72,7 +69,7 @@ def callback_command(call: CallbackQuery) -> None:
             call.from_user.id, constants.HELP_MESSAGE, reply_markup=keyboard_commands(call.data)
         )
         user.edit('bot_message', bot_message)
-    elif call.data in [constants.LOW, constants.HIGH, constants.CUSTOM]:
+    elif call.data in [constants.LOWPRICE, constants.HIGHPRICE, constants.BESTDEAL]:
         lowprice_highprice.record_command(call)
     elif call.data == constants.HISTORY:
         history.history_menu(call)
@@ -84,7 +81,6 @@ def echo_handler(message: Message) -> None:
     """
     Функция - обработчик всех входящих сообщений, не входящих в сценарий работы бота.
     Так же обрабатывает приветствия пользователя.
-
     :param message: Message
     :return: None
     """
@@ -111,7 +107,6 @@ def check_state_inline_keyboard(message: Message) -> None:
     (пользователь перешёл в другую команду). Чтобы исключить повторное нажатие на кнопку вне сценария,
     данная функция удаляет оставшиеся inline-кнопки, если кнопки нет, то возникает исключение
     ApiTelegramException, которое функция подавляет.
-
     :param message: Message
     :return: None
     """

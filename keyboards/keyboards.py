@@ -8,24 +8,18 @@ from telebot import types
 def keyboard_commands(command: str) -> InlineKeyboardMarkup:
     """
     Функция - создаёт inline-клавиатуру для команд.
-
     :param command: str
     :return: InlineKeyboardMarkup
     """
     keyboard = types.InlineKeyboardMarkup(row_width=2)
     if command == constants.START:
-        key_help = types.InlineKeyboardButton(text=keyboards_text.KEY_HELP,
-                                              callback_data=constants.HELP)
+        key_help = types.InlineKeyboardButton(text=keyboards_text.KEY_HELP, callback_data=constants.HELP)
         keyboard.add(key_help)
     elif command == constants.HELP:
-        key_lowprice = types.InlineKeyboardButton(text=keyboards_text.KEY_LOW,
-                                                  callback_data=constants.LOW)
-        key_highprice = types.InlineKeyboardButton(text=keyboards_text.KEY_HIGH,
-                                                   callback_data=constants.HIGH)
-        key_bestdeal = types.InlineKeyboardButton(text=keyboards_text.KEY_CUSTOM,
-                                                  callback_data=constants.CUSTOM)
-        key_history = types.InlineKeyboardButton(text=keyboards_text.KEY_HISTORY,
-                                                 callback_data=constants.HISTORY)
+        key_lowprice = types.InlineKeyboardButton(text=keyboards_text.KEY_LOWPRICE, callback_data=constants.LOWPRICE)
+        key_highprice = types.InlineKeyboardButton(text=keyboards_text.KEY_HIGHPRICE, callback_data=constants.HIGHPRICE)
+        key_bestdeal = types.InlineKeyboardButton(text=keyboards_text.KEY_BESTDEAL, callback_data=constants.BESTDEAL)
+        key_history = types.InlineKeyboardButton(text=keyboards_text.KEY_HISTORY, callback_data=constants.HISTORY)
         keyboard.add(key_lowprice, key_highprice, key_bestdeal, key_history)
     return keyboard
 
@@ -33,7 +27,6 @@ def keyboard_commands(command: str) -> InlineKeyboardMarkup:
 def keyboards_currency() -> InlineKeyboardMarkup:
     """
     Функция - создаёт inline-клавиатуру со значениями валют.
-
     :return: InlineKeyboardMarkup
     """
     keyboard = types.InlineKeyboardMarkup(row_width=3)
@@ -48,7 +41,6 @@ def keyboards_currency() -> InlineKeyboardMarkup:
 def keyboards_city(city_list: List[tuple]) -> InlineKeyboardMarkup:
     """
     Функция - создаёт inline-клавиатуру с уточнением города поиска.
-
     :return: InlineKeyboardMarkup
     """
     keyboard = types.InlineKeyboardMarkup(row_width=1)
@@ -61,7 +53,6 @@ def keyboards_city(city_list: List[tuple]) -> InlineKeyboardMarkup:
 def keyboards_photo() -> InlineKeyboardMarkup:
     """
     Функция - создаёт inline-клавиатуру с уточнением вывода фото.
-
     :return: InlineKeyboardMarkup
     """
     keyboard = types.InlineKeyboardMarkup(row_width=2)
@@ -75,7 +66,6 @@ def keyboards_count_photo() -> InlineKeyboardMarkup:
     """
     Функция - создаёт inline-клавиатуру с цифрами на кнопках от 1 до 10.
     Предназначена для запроса информации по количеству: отелей и фотографий
-
     :return: InlineKeyboardMarkup
     """
     keyboard = types.InlineKeyboardMarkup(row_width=5)
@@ -91,7 +81,6 @@ def keyboards_count_photo() -> InlineKeyboardMarkup:
 def keyboard_history(message: str) -> InlineKeyboardMarkup:
     """
     Функция - создаёт inline-клавиатуру с меню раздела History.
-
     :return: InlineKeyboardMarkup
     """
     keyboard = types.InlineKeyboardMarkup()

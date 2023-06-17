@@ -11,7 +11,7 @@ else:
   load_dotenv()
 
 TOKEN = os.environ.get('TOKEN')
-RAPIDAPI_KEY = os.environ.get('RAPIDAPI_KEY')
+RAPIDAPI_KEY = os.environ.get('API_KEY')
 
 
 HEADERS = {
@@ -22,7 +22,7 @@ HEADERS = {
 
 URL_SEARCH = 'https://hotels4.p.rapidapi.com/locations/v2/search'
 URL_PROPERTY_LIST = 'https://hotels4.p.rapidapi.com/properties/v2/list'
-URL_PHOTO = 'https://hotels4.p.rapidapi.com/properties/get-hotel-photos'
+URL_PHOTO = 'https://hotels4.p.rapidapi.com/properties/v2/detail'
 URL_HOTEL = 'https://www.hotels.com/ho{}'
 
 
@@ -82,4 +82,11 @@ QUERY_CUSTOM =  {
     'min': 1
   }}
 }
-QUERY_PHOTO = {"id":"1178275040"}
+QUERY_PHOTO = {
+	"currency": "USD",
+	"eapid": 1,
+	"locale": "en_US",
+	"siteId": 300000001,
+	"propertyId": "32133009"
+}
+
