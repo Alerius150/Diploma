@@ -16,7 +16,7 @@ RAPIDAPI_KEY = os.environ.get('RAPIDAPI_KEY')
 
 HEADERS = {
   'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-  'X-RapidAPI-Key': API_KEY
+  'X-RapidAPI-Key': RAPIDAPI_KEY
 }
 
 
@@ -82,10 +82,4 @@ QUERY_CUSTOM =  {
     'min': 1
   }}
 }
-QUERY_PHOTO = {
-	"currency": "USD",
-	"eapid": 1,
-	"locale": "en_US",
-	"siteId": 300000001,
-	"propertyId": "32133009"
-}
+QUERY_PHOTO = {"id":"1178275040"}

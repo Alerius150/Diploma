@@ -287,4 +287,3 @@ class DataBaseModel:
         "FROM 'table_hotel' WHERE command_id = ?", (history_id,))
       user_hotels = cursor.fetchall()
       return user_hotels
-
