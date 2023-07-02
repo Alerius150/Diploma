@@ -37,13 +37,13 @@ QUERY_PROPERTY_LIST = {
   'eapid': 1,
   'locale': 'ru_RU',
   'siteId': 300000001,
-  'destination': {'regionId': '2621'},
-  'checkInDate': {
+  'destinationId': {'regionId': '2621'},
+  'checkIn': {
     'day': 10,
     'month': 10,
     'year': 2023
   },
-  'checkOutDate': {
+  'checkOut': {
     'day': 15,
     'month': 10,
     'year': 2023

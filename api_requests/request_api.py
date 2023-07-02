@@ -34,7 +34,7 @@ def request_search(message: Message) -> Response:
 @exception_request_handler
 def request_property_list(call: CallbackQuery) -> Response:
     """
-    Функция - делающая запрос на API по адресу: 'https://hotels4.p.rapidapi.com/properties/list'
+    Функция - делающая запрос на API по адресу: 'https://hotels4.p.rapidapi.com/properties/v2/list'
     Предназначена для команд lowprice и highprice. В зависимости от введенной команды сортирует ответ
     по возврастанию цены, или же по убыванию. Возвращает Response, содержащий в себе список отелей в выбранном городе.
     :param call: CallbackQuery
