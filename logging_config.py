@@ -60,6 +60,7 @@ dict_config = {
 def custom_logger(logger_name: str) -> logging.Logger:
     """
     Функция - для применения кастомной конфигурации Логгера
+
     :param logger_name: str
     :return: Logger
     """

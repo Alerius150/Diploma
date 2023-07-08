@@ -1,9 +1,9 @@
 """Файл для замены текста inline-кнопок"""
 
 KEY_HELP = 'Help'
-KEY_LOWPRICE = 'Lowprice'
-KEY_HIGHPRICE = 'Highprice'
-KEY_BESTDEAL = 'Bestdeal'
+KEY_LOW = 'Low'
+KEY_HIGH = 'High'
+KEY_CUSTOM = 'Custom'
 KEY_HISTORY = 'History'
 
 

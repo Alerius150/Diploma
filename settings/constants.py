@@ -2,20 +2,21 @@
 
 START = '/start'
 HELP = '/help'
-LOWPRICE = '/lowprice'
-HIGHPRICE = '/highprice'
-BESTDEAL = '/bestdeal'
+LOW = '/low'
+HIGH = '/high'
+CUSTOM = '/custom'
 HISTORY = '/history'
 
-WELCOME = 'Привет, {}! Добро пожаловать в телеграм-бот!'
+WELCOME = 'Привет, {}! Добро пожаловать в телеграм-бот турагентства по поиску отелей - "Too Easy Travel"'
 HOW_ARE_YOU_ANSWER = 'У меня всё здорово! Как твои дела?'
 SUGGEST_FINDING = 'Предлагаю заняться поиском отелей)'
 GOODBYE_MESSAGE = 'Всего хорошего! До скорой встречи)'
 INSTRUCTION = 'Для ознакомления с командами бота, нажмите "Help", или введите /help'
 WARNING_MESSAGE = 'Такой команды не существует! Следуйте указанным на экране шагам!'
-HELP_MESSAGE = '/lowprice -  вывод самых дешёвых отелей в городе\n' \
-       '/highprice - вывод самых дорогих отелей в городе\n' \
-       '/bestdeal -  вывод отелей, наиболее подходящих по цене и расположению от центра\n' \
+HELP_MESSAGE = '/low-  вывод самых дешёвых отелей в городе\n' \
+       '/high - вывод самых дорогих отелей в городе\n' \
+       '/custom -  вывод отелей, наиболее подходящих по цене и расположению ' \
+               'от центра\n' \
        '/history - вывод истории поиска отелей'
 INCORRECT = 'Введена не корректная команда!'
 REQUEST_ERROR = 'Что-то пошло не так! Давайте попробуем снова.'
@@ -61,25 +62,21 @@ HISTORY_EMPTY = 'История запросов пустая.'
 HISTORY_COMPLETE = 'Показ истории завершён'
 
 
-COMMAND = ['start', 'help', 'lowprice', 'highprice', 'bestdeal', 'history']
-COMMAND_LIST = [START, HELP, LOWPRICE, HIGHPRICE, BESTDEAL, HISTORY]
+COMMAND = ['start', 'help', 'low', 'high', 'custom', 'history']
+COMMAND_LIST = [START, HELP, LOW, HIGH, CUSTOM, HISTORY]
 WELCOME_LIST = ['привет', 'hello', 'как дела', 'how are you', 'пока', 'goodbye']
 
 
 HOTEL_SHOW_RU = "*Название:* {}\n" \
-                "*Адрес:* {}\n" \
                 "*Расстояние от центра:* {}\n" \
                 "*Цена за сутки:* {} {}\n" \
                 "*Цена за период:* {:,} {}\n" \
-                "*Количество звёзд:* {}\n" \
                 "*Ссылка:* {}"
 
 HOTEL_SHOW_EN = "*Name:* {}\n" \
-                "*Address:* {}\n" \
                 "*Distance  to the center:* {}\n" \
                 "*Price per day:* {} {}\n" \
                 "*Price per period:* {:,} {}\n" \
-                "*Star rating:* {}\n" \
                 "*Link:* {}"
 
 
@@ -94,3 +91,4 @@ HISTORY_COMMAND_EN = "Date and time: {}\n" \
                      "City: {}\n" \
                      "Date of residence from: {}\n" \
                      "Date of residence by: {}\n"
+

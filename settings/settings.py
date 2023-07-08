@@ -6,23 +6,23 @@ import os
 from dotenv import load_dotenv, find_dotenv
 
 if not find_dotenv():
-    exit('Файл .env отсутствует')
+  exit('Файл .env отсутствует')
 else:
-    load_dotenv()
+  load_dotenv()
 
 TOKEN = os.environ.get('TOKEN')
-RAPIDAPI_KEY = os.environ.get('API_KEY')
+API_KEY = os.environ.get('API_KEY')
 
 
 HEADERS = {
-    'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-    'X-RapidAPI-Key': RAPIDAPI_KEY
+  'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
+  'X-RapidAPI-Key': API_KEY
 }
 
 
 URL_SEARCH = 'https://hotels4.p.rapidapi.com/locations/v2/search'
 URL_PROPERTY_LIST = 'https://hotels4.p.rapidapi.com/properties/v2/list'
-URL_PHOTO = 'https://hotels4.p.rapidapi.com/properties/get-hotel-photos'
+URL_PHOTO = 'https://hotels4.p.rapidapi.com/properties/v2/detail'
 URL_HOTEL = 'https://www.hotels.com/ho{}'
 
 
@@ -82,5 +82,6 @@ QUERY_CUSTOM =  {
     'min': 1
   }}
 }
+
 
 QUERY_PHOTO = {'id': '1178275040'}
