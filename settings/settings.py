@@ -23,7 +23,7 @@ HEADERS = {
 URL_SEARCH = 'https://hotels4.p.rapidapi.com/locations/v3/search'
 URL_PROPERTY_LIST = 'https://hotels4.p.rapidapi.com/properties/v3/list'
 URL_PHOTO = 'https://hotels4.p.rapidapi.com/properties/v2/detail'
-URL_HOTEL = 'https://www.hotels.com/ho{}''
+URL_HOTEL = 'https://www.hotels.com/ho{}'
 
 
 QUERY_SEARCH = {
@@ -61,6 +61,7 @@ QUERY_PROPERTY_LIST = {{
 			"min": 100
 		} }
 }
+}
 QUERY_BESTDEAL = {
     'destinationId': '1506246',
     'pageNumber': '1',
@@ -74,4 +75,5 @@ QUERY_BESTDEAL = {
     'locale': 'en_US',
     'currency': 'EUR'
 }
+
 QUERY_PHOTO = {'id': '1178275040'}
