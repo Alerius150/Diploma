@@ -103,4 +103,3 @@ def keyboard_history(message: str) -> InlineKeyboardMarkup:
         key = types.InlineKeyboardButton(text=elem, callback_data=elem)
         keyboard.add(key)
     return keyboard
-
