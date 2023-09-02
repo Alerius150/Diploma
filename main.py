@@ -3,7 +3,7 @@
 """
 
 from database.models import DataBaseModel
-from loader import bot, logger
+from loader import bot,logger
 
 
 if __name__ == '__main__':

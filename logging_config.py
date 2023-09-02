@@ -4,6 +4,7 @@
 
 import logging
 import logging.config
+from logging import Logger
 
 
 class FilterError(logging.Filter):
@@ -65,5 +66,5 @@ def custom_logger(logger_name: str) -> logging.Logger:
     :return: Logger
     """
     logging.config.dictConfig(dict_config)
-    logger = logging.getLogger(logger_name)
+    logger: Logger = logging.getLogger(logger_name)
     return logger
